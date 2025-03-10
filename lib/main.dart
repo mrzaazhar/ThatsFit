@@ -1,6 +1,27 @@
+// ignore_for_file: prefer_const_constructors
+import 'package:flutter/foundation.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if(kIsWeb){  
+   await Firebase.initializeApp(
+        options: FirebaseOptions(
+          apiKey: "AIzaSyD_PDq9iaXGI8IlESo0z_BordVSpP7xGX4",
+          authDomain: "thatsfit-37425.firebaseapp.com",
+          projectId: "thatsfit-37425",
+          storageBucket: "thatsfit-37425.firebasestorage.app",
+          messagingSenderId: "421858940260",
+          appId: "1:421858940260:web:29bd32970fdb48e1d75671"
+        )
+          );
+}
+
+  else{
+   await Firebase.initializeApp();
+} 
   runApp(const MyApp());
 }
 
@@ -38,7 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-  
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,

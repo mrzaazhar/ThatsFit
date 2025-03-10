@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "421858940260",
+    "project_id": "thatsfit-37425",
+    "storage_bucket": "thatsfit-37425.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421858940260:android:ac120d9cf3148008d75671",
+        "android_client_info": {
+          "package_name": "com.example.thatsfit_fyp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChb451NoGbM7RhBN1VTSyxqunHWR8J-iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
