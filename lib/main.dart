@@ -50,8 +50,7 @@ class LoginPage extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
-            image: AssetImage(
-                'assets/background.png'), // Add your background image here
+            image: AssetImage('assets/background.png'), // Add your background image here
             fit: BoxFit.cover,
           ),
         ),
@@ -61,7 +60,7 @@ class LoginPage extends StatelessWidget {
             child: Card(
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(30),
               ),
               elevation: 5,
               child: Padding(
@@ -72,8 +71,9 @@ class LoginPage extends StatelessWidget {
                     Text(
                       'Login',
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'aileron',
                       ),
                     ),
                     SizedBox(height: 20),
