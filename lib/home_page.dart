@@ -4,13 +4,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green, // Background color
+      backgroundColor: Color(0xFF008000), // Background color
       appBar: AppBar(
-        title: Text('ThatsFit'),
-        backgroundColor: Colors.green,
+        title: Text(
+          'ThatsFit',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'DM Sans'),
+        ),
+        backgroundColor: Colors.grey,
         actions: [
           IconButton(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person, size: 30),
             onPressed: () {
               // Handle user profile action
             },
@@ -24,28 +31,55 @@ class HomePage extends StatelessWidget {
             // Step Count Section
             Container(
               padding: EdgeInsets.all(20),
+              width: 300,
               decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(15),
+                color: Color(0xFFbfbfbf),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
                 children: [
                   Text(
                     'Step Count',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'DM Sans'),
                   ),
                   SizedBox(height: 10),
-                  CircularProgressIndicator(
-                    value: 0.7, // Example value
-                    backgroundColor: Colors.grey,
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-                  ),
-                  SizedBox(height: 10),
-                  TextButton(
-                    onPressed: () {
-                      // Handle view more action
-                    },
-                    child: Text('View More'),
+                  // Row for CircularProgressIndicator and other elements
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 60, // Set the width of the CircularProgressIndicator
+                        height: 60, // Set the height of the CircularProgressIndicator
+                        child: CircularProgressIndicator(
+                          value: 0.7, // Example value
+                          backgroundColor: Colors.grey,
+                          valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF33443c)),
+                          strokeWidth: 10,
+                        ),
+                      ),
+                      SizedBox(
+                          width:
+                              20), // Space between the progress indicator and text
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              // Handle view more action
+                            },
+                            child: Text('View More', style: TextStyle(color: Colors.black,fontFamily: 'DM Sans')),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xFF6e9277),
+                              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -68,7 +102,8 @@ class HomePage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/workout_image.png'), // Add your workout image here
+                    image: AssetImage(
+                        'assets/workout_image.png'), // Add your workout image here
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(15),
@@ -80,4 +115,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-} 
+}
+
+

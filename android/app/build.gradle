@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.thatsfit_fyp"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 34
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -46,4 +46,5 @@ flutter {
 
 dependencies {
 implementation platform('com.google.firebase:firebase-bom:33.10.0')
+implementation 'com.google.firebase:firebase-analytics'
 }
