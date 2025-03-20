@@ -51,7 +51,7 @@ class LoginPage extends StatelessWidget {
           color: Colors.black,
           image: DecorationImage(
             image: AssetImage(
-                'assets/background.png'), // Add your background image here
+                'assets/PNG/background.png'), // Add your background image here
             fit: BoxFit.cover,
           ),
         ),
