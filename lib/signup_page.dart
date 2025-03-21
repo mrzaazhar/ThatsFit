@@ -10,11 +10,15 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
     _emailController.dispose();
+    _nameController.dispose();
+    _usernameController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
@@ -39,11 +43,15 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Sign Up'),
-        backgroundColor: Colors.green,
-      ),
       body: Container(
+        decoration: BoxDecoration(
+          color: Colors.black,
+          image: DecorationImage(
+            image: AssetImage(
+                'assets/PNG/background.png'), // Add your background image here
+            fit: BoxFit.cover,
+          ),
+        ),
         padding: EdgeInsets.all(20.0),
         child: Card(
           elevation: 5,
@@ -63,6 +71,25 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 SizedBox(height: 20),
+                // Name Field
+                TextField(
+                  controller: _nameController,
+                  decoration: InputDecoration(
+                    labelText: 'Name',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(height: 10),
+                // Username Field
+                TextField(
+                  controller: _usernameController,
+                  decoration: InputDecoration(
+                    labelText: 'Username',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(height: 10),
+                // Email Field
                 TextField(
                   controller: _emailController,
                   decoration: InputDecoration(
@@ -71,6 +98,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 SizedBox(height: 10),
+                // Password Field
                 TextField(
                   controller: _passwordController,
                   obscureText: true,
