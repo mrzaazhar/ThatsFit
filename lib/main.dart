@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'signup_page.dart';
 import 'home_page.dart';
+import 'profile_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {

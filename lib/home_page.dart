@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'profile_page.dart'; // Import the ProfilePage
 
 class HomePage extends StatefulWidget {
   @override
@@ -42,6 +43,10 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.person, size: 30),
             onPressed: () {
               // Handle user profile action
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
             },
           ),
         ],
