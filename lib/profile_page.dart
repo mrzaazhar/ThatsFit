@@ -60,7 +60,66 @@ class ProfilePage extends StatelessWidget {
                     ),
                     elevation: 5,
                     child: Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(15),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                        Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children:[
+                          Icon(Icons.person, size: 25, color: Colors.black),
+                          SizedBox(width: 10),
+                          Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            child: InkWell(
+                              onTap: () {},
+                              child: Text('Edit Profile', style: TextStyle(color: Colors.black, fontSize: 15 )),
+                            ),
+                          ),
+                        ]
+                      ),
+                      SizedBox(height: 10),
+                        Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.delete,
+                                      size: 25, color: Colors.black),
+                                  SizedBox(width: 10),
+                                  Container(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 4),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Text('Delete Profile',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 15)),
+                                    ),
+                                  ),
+                                ]),
+                      SizedBox(height: 10),
+                        Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.logout,
+                                      size: 25, color: Colors.black),
+                                  SizedBox(width: 10),
+                                  Container(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 4),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Text('Logout',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 15)),
+                                    ),
+                                  ),
+                                ]),
+                        ],)
                     ),
                   ),
                 ),
