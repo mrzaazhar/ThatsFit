@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'edit_profile1.dart';
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,10 @@ class ProfilePage extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile1()),
+                                );
+                              },
                               child: Text('Edit Profile', style: TextStyle(color: Colors.black, fontSize: 15 )),
                             ),
                           ),
